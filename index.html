@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+      <div class="container mt-5">
+
+
+
+
+        <form id="dropFileForm" action="http://localhost/upload.php" method="post" onsubmit="uploadFiles(event)">
+            <input type="file" name="files[]" id="fileInput" multiple ="addFiles(event)">
+          
+            <label for="fileInput" id="fileLabel" ondragover="overrideDefault(event);fileHover();" ondragenter="overrideDefault(event);fileHover();" ondragleave="overrideDefault(event);fileHoverEnd();" ondrop="overrideDefault(event);fileHoverEnd();
+                  addFiles(event);">
+              <i class="fa fa-download fa-5x  icon"  ></i>
+              <img src="" alt="">
+              <br>
+              <span id="fileLabelText">
+                Choose a file or drag it here
+              </span>
+              <br>
+              <span id="uploadStatus"></span>
+            </label>
+          
+            <input type="submit" value="Upload" class="uploadButton">
+          </form>
+    
+    
+    
+
+
+      </div>
+
+
+
+
+
+      <script src="https://kit.fontawesome.com/071b451045.js" crossorigin="anonymous"></script>
+
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
